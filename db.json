@@ -1,0 +1,56 @@
+use book-inline-array-sort-percentile;
+db.dropDatabase();
+
+// Insert 7 records into the performance_test_results collection
+db.performance_test_results.insertMany([
+  {
+    "testRun": 1,
+    "datetime": ISODate("2021-08-01T22:51:27.638Z"),
+    "responseTimesMillis": [
+      62, 97, 59, 104, 97, 71, 62, 115, 82, 87,
+    ],
+  },
+  {
+    "testRun": 2,
+    "datetime": ISODate("2021-08-01T22:56:32.272Z"),
+    "responseTimesMillis": [
+      34, 63, 51, 104, 87, 63, 64, 86, 105, 51, 73,
+      78, 59, 108, 65, 58, 69, 106, 87, 93, 65,
+    ],
+  },
+  {
+    "testRun": 3,
+    "datetime": ISODate("2021-08-01T23:01:08.908Z"),
+    "responseTimesMillis": [
+      56, 72, 83, 95, 107, 83, 85,
+    ],
+  },
+  {
+    "testRun": 4,
+    "datetime": ISODate("2021-08-01T23:17:33.526Z"),
+    "responseTimesMillis": [
+      78, 67, 107, 110,
+    ],
+  },
+  {
+    "testRun": 5,
+    "datetime": ISODate("2021-08-01T23:24:39.998Z"),
+    "responseTimesMillis": [
+      75, 91, 75, 87, 99, 88, 55, 72, 99, 102,
+    ],
+  },
+  {
+    "testRun": 6,
+    "datetime": ISODate("2021-08-01T23:27:52.272Z"),
+    "responseTimesMillis": [
+      88, 89,
+    ],
+  },
+  {
+    "testRun": 7,
+    "datetime": ISODate("2021-08-01T23:31:59.917Z"),
+    "responseTimesMillis": [
+      101,
+    ],
+  },
+]);
